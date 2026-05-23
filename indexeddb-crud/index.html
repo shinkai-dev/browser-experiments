@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>IndexedDB検証</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; max-width: 800px; margin: 0 auto; }
+    button { margin: 4px; padding: 8px 16px; cursor: pointer; }
+    pre { background: #f4f4f4; padding: 16px; border-radius: 6px; overflow-x: auto; }
+    h2 { margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <h1>IndexedDB検証</h1>
+
+  <h2>基本操作</h2>
+  <button onclick="runInsert()">INSERT（初期データ投入）</button>
+  <button onclick="runSelectAll()">SELECT（全件取得）</button>
+  <button onclick="runSelectByIndex()">SELECT（インデックス検索）</button>
+  <button onclick="runUpdate()">UPDATE（id:1 を更新）</button>
+  <button onclick="runDelete()">DELETE（id:1 を削除）</button>
+
+  <h2>トランザクション検証</h2>
+  <button onclick="runTransactionSuccess()">トランザクション（成功）</button>
+  <button onclick="runTransactionFail()">トランザクション（失敗・ロールバック確認）</button>
+
+  <h2>結果</h2>
+  <pre id="output">ボタンを押すと結果が表示されます</pre>
+
+  <script src="app.js"></script>
+</body>
+</html>
