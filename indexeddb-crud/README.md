@@ -73,3 +73,6 @@ UPDATE・DELETE は id:1 を対象にしているため、INSERT より先に実
 ### DBをリセットしてidを1から振り直したい場合
 
 `F12 → Application → IndexedDB → TaskDB → 右クリック →「Delete database」→ ページをリロード`
+
+## 技術記事リンク
+https://zenn.dev/shinkai_m/articles/4ddf25caef48fb
