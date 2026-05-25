@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>IndexedDB + ベクトル検索</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; max-width: 800px; margin: 0 auto; }
+    button { margin: 4px; padding: 8px 16px; cursor: pointer; }
+    pre { background: #f4f4f4; padding: 16px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; }
+    h2 { margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+    input { padding: 8px; width: 300px; margin-right: 8px; }
+    .search-box { margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <h1>IndexedDB + ベクトル検索</h1>
+  <p>ブラウザだけで動作する簡易RAGの検証サンプルです。</p>
+
+  <h2>検索</h2>
+  <div class="search-box">
+    <input id="query" placeholder="検索ワードを入力してください">
+    <button onclick="search()">検索実行</button>
+  </div>
+
+  <h2>結果</h2>
+  <pre id="result">検索を実行すると結果が表示されます</pre>
+
+  <script src="app.js"></script>
+</body>
+</html>
