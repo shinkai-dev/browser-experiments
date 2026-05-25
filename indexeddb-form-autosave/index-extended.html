@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>申請フォーム（下書き自動保存）</title>
+  <style>
+    body { font-family: sans-serif; padding: 24px; max-width: 600px; margin: 0 auto; }
+    label { display: block; margin-top: 16px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    button { margin-top: 20px; padding: 10px 24px; cursor: pointer; }
+    #status { margin-top: 12px; color: #888; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  // 追加フォーム確認用のHTML（desiredDateを追加）
+
+<h1>備品申請フォーム</h1>
+
+  <form id="applicationForm">
+    <label>申請者名
+      <input type="text" id="applicantName" placeholder="山田 太郎">
+    </label>
+
+    <label>部署
+      <select id="department">
+        <option value="">選択してください</option>
+        <option value="engineering">エンジニアリング</option>
+        <option value="sales">営業</option>
+        <option value="hr">人事</option>
+      </select>
+    </label>
+
+    <label>申請品目
+      <input type="text" id="itemName" placeholder="ノートPC">
+    </label>
+
+    <label>数量
+      <input type="number" id="quantity" min="1" value="1">
+    </label>
+
+    <label>申請理由
+      <textarea id="reason" rows="4" placeholder="申請理由を記入してください"></textarea>
+    </label>
+
+    <label>希望納期
+      <input type="date" id="desiredDate">
+    </label>
+
+    <fieldset style="margin-top: 16px; border: 1px solid #ccc; padding: 12px;">
+      <legend style="font-weight: bold;">優先度</legend>
+      <label style="font-weight: normal; display: inline-block; margin-right: 16px;">
+        <input type="radio" name="priority" id="priorityHigh" value="high"> 高
+      </label>
+      <label style="font-weight: normal; display: inline-block; margin-right: 16px;">
+        <input type="radio" name="priority" id="priorityMedium" value="medium"> 中
+      </label>
+      <label style="font-weight: normal; display: inline-block;">
+        <input type="radio" name="priority" id="priorityLow" value="low"> 低
+      </label>
+    </fieldset>
+
+    <fieldset style="margin-top: 16px; border: 1px solid #ccc; padding: 12px;">
+      <legend style="font-weight: bold;">添付書類</legend>
+      <label style="font-weight: normal; display: inline-block; margin-right: 16px;">
+        <input type="checkbox" id="attachQuote"> 見積書
+      </label>
+      <label style="font-weight: normal; display: inline-block; margin-right: 16px;">
+        <input type="checkbox" id="attachSpec"> 仕様書
+      </label>
+      <label style="font-weight: normal; display: inline-block;">
+        <input type="checkbox" id="attachOther"> その他
+      </label>
+    </fieldset>
+
+    <button type="submit">申請する</button>
+  </form>
+
+  <p id="status"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
