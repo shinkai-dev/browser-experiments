@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>File System Access API ローカル直接編集エディタ</title>
+  <!-- 目的: ローカルフォルダを直接開き、テキストファイルの編集・上書き保存・新規作成をブラウザだけで検証する -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app-root" class="fsalocal-container">
+    <h1>File System Access API ローカル直接編集エディタ</h1>
+    <p class="fsalocal-lead">
+      ローカルフォルダを開いてテキストファイル（.txt / .md）を編集し、そのままローカルファイルへ上書き保存します。
+      OPFS などブラウザ内ストレージは経由せず、ローカルファイルシステムを直接操作します。
+    </p>
+
+    <div id="unsupportedWarning" class="fsalocal-warning" hidden>
+      ⚠️ このブラウザは File System Access API に対応していません。
+      Chrome / Edge の最新版でお試しください。
+    </div>
+
+    <section class="fsalocal-section">
+      <h2>1. フォルダを開く</h2>
+      <button id="btnOpenFolder" type="button">ローカルフォルダを選択</button>
+      <span id="folderName" class="fsalocal-badge"></span>
+      <ul id="fileList" class="fsalocal-file-list"></ul>
+    </section>
+
+    <section class="fsalocal-section">
+      <h2>2. 新規ファイル作成</h2>
+      <div class="fsalocal-button-row">
+        <input id="newFileName" type="text" placeholder="例: memo.txt">
+        <button id="btnCreateFile" type="button">新規ファイル作成</button>
+      </div>
+    </section>
+
+    <section id="editorSection" class="fsalocal-section" hidden>
+      <h2>3. 編集</h2>
+      <div class="fsalocal-editor-header">
+        <span id="currentFileName" class="fsalocal-filename"></span>
+        <span id="permissionBadge" class="fsalocal-badge"></span>
+      </div>
+      <textarea id="editorArea" class="fsalocal-editor" spellcheck="false"></textarea>
+      <div class="fsalocal-button-row">
+        <button id="btnSaveLocal" type="button">ローカルファイルへ上書き保存</button>
+        <button id="btnReload" type="button">ローカルファイルを再読込</button>
+      </div>
+    </section>
+
+    <section class="fsalocal-section">
+      <h2>4. ログ</h2>
+      <pre id="logOutput" class="fsalocal-log"></pre>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
