@@ -1,0 +1,75 @@
+/* screen-wake-lock-viewer 実験専用スタイル（他実験と衝突しないよう swl- プレフィックスを使用） */
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  margin: 0;
+  padding: 24px;
+}
+
+.swl-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.swl-description {
+  color: #444;
+  line-height: 1.6;
+}
+
+.swl-panel {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.swl-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.swl-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0071e3;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.swl-buttons button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.swl-status {
+  font-weight: 600;
+}
+
+.swl-status-ok {
+  color: #1a7f37;
+}
+
+.swl-status-ng {
+  color: #c0392b;
+}
+
+.swl-log {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 13px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+.swl-log li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}

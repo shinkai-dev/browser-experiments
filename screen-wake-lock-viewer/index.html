@@ -1,0 +1,44 @@
+<!--
+  実験名: Screen Wake Lock API 挙動確認
+  目的: Screen Wake Lock API の取得(request) / 解放(release) / ブラウザ対応状況を
+        ブラウザ単体で確認するための最小サンプル。
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Wake Lock API 挙動確認</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="swl-container">
+    <h1>Screen Wake Lock API 挙動確認</h1>
+    <p class="swl-description">
+      画面がスリープしないようにする Screen Wake Lock API の基本的な挙動
+      （API対応チェック / Wake Lock 取得 / 解放）を検証するサンプルです。
+    </p>
+
+    <section class="swl-panel">
+      <h2>1. API対応状況</h2>
+      <p id="support-status" class="swl-status">確認中...</p>
+    </section>
+
+    <section class="swl-panel">
+      <h2>2. Wake Lock 操作</h2>
+      <div class="swl-buttons">
+        <button id="btn-request" type="button">Wake Lock を取得</button>
+        <button id="btn-release" type="button" disabled>Wake Lock を解放</button>
+      </div>
+      <p id="lock-status" class="swl-status">現在の状態: 未取得</p>
+    </section>
+
+    <section class="swl-panel">
+      <h2>3. 操作ログ</h2>
+      <ul id="log-list" class="swl-log"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

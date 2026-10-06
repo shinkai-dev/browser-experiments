@@ -1,0 +1,82 @@
+.fsalocal-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+.fsalocal-lead {
+  color: #444;
+}
+.fsalocal-warning {
+  background: #fff3cd;
+  border: 1px solid #ffe08a;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.fsalocal-section {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.fsalocal-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #eee;
+  font-size: 0.85em;
+}
+.fsalocal-badge[data-state="granted"] {
+  background: #d4f5dd;
+}
+.fsalocal-badge[data-state="denied"] {
+  background: #f8d7da;
+}
+.fsalocal-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+.fsalocal-file-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+.fsalocal-editor-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.fsalocal-filename {
+  font-weight: bold;
+}
+.fsalocal-editor {
+  width: 100%;
+  min-height: 240px;
+  font-family: monospace;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 8px;
+}
+.fsalocal-button-row {
+  margin-top: 4px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.fsalocal-log {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 12px;
+  border-radius: 6px;
+  min-height: 120px;
+  max-height: 240px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-size: 13px;
+}
